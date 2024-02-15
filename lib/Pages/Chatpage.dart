@@ -5,7 +5,8 @@ import 'package:whatsapp/model/ChatModel.dart';
 
 class ChatPage extends StatefulWidget {
   final List<ChatModel> chatmodels;
-  const ChatPage({super.key, required this.chatmodels});
+  final ChatModel sourchat;
+  const ChatPage({super.key, required this.chatmodels, required this.sourchat});
 
   @override
   State<ChatPage> createState() => _ChatPageState();
@@ -29,6 +30,7 @@ class _ChatPageState extends State<ChatPage> {
         itemCount: widget.chatmodels.length,
         itemBuilder: (contex, index) => CustomCard(
           chatModel: widget.chatmodels[index],
+          sourchat: widget.sourchat,
         ),
       ),
     );

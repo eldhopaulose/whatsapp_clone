@@ -3,8 +3,10 @@ import 'package:whatsapp/Screens/IndivtualPage.dart';
 import 'package:whatsapp/model/ChatModel.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key, required this.chatModel});
+  const CustomCard(
+      {super.key, required this.chatModel, required this.sourchat});
   final ChatModel chatModel;
+  final ChatModel sourchat;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,8 @@ class CustomCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => IndividulaPage(chatModel: chatModel),
+            builder: (context) =>
+                IndividulaPage(chatModel: chatModel, sourchat: sourchat),
           ),
         );
       },

@@ -5,10 +5,11 @@ import 'package:whatsapp/model/ChatModel.dart';
 
 class Homescreen extends StatefulWidget {
   final List<ChatModel> chatmodels;
-  // final ChatModel sourchat;
+  final ChatModel sourchat;
   const Homescreen({
     super.key,
     required this.chatmodels,
+    required this.sourchat,
   });
 
   @override
@@ -82,7 +83,7 @@ class _HomescreenState extends State<Homescreen>
       ),
       body: TabBarView(controller: _controller, children: [
         CameraPage(),
-        ChatPage(chatmodels: widget.chatmodels),
+        ChatPage(chatmodels: widget.chatmodels, sourchat: widget.sourchat),
         Text("STATUS"),
         Text("CALLS"),
       ]),

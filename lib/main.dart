@@ -1,7 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Screens/CameraScreen.dart';
-import 'package:whatsapp/Screens/Homescreen.dart';
 import 'package:whatsapp/Screens/LoginSceen.dart';
 
 Future<void> main() async {
